@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,71 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MAS157ControlFunVanA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4j3-yX-AHe">
+                                <rect key="frame" x="101.5" y="100" width="172" height="80"/>
+                            </imageView>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGZ-0p-bDI">
+                                <rect key="frame" x="91" y="224" width="268" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtD-AS-dz2">
+                                <rect key="frame" x="16" y="229" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OQ-BU-Boi">
+                                <rect key="frame" x="16" y="277" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxi-G8-mOi">
+                                <rect key="frame" x="91" y="272" width="268" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oxi-G8-mOi" secondAttribute="bottom" constant="365" id="5Lr-V4-kC9"/>
+                            <constraint firstItem="DtD-AS-dz2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="209" id="FE2-hJ-GP3"/>
+                            <constraint firstItem="HGZ-0p-bDI" firstAttribute="leading" secondItem="DtD-AS-dz2" secondAttribute="trailing" constant="8" symbolic="YES" id="OO9-WK-jMg"/>
+                            <constraint firstItem="4j3-yX-AHe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="VGe-lL-nSF"/>
+                            <constraint firstItem="HGZ-0p-bDI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VNc-pY-57I"/>
+                            <constraint firstItem="DtD-AS-dz2" firstAttribute="centerY" secondItem="HGZ-0p-bDI" secondAttribute="centerY" id="W8S-Wi-YZ9"/>
+                            <constraint firstItem="0OQ-BU-Boi" firstAttribute="top" secondItem="DtD-AS-dz2" secondAttribute="bottom" constant="27" id="aNg-KC-SOb"/>
+                            <constraint firstItem="DtD-AS-dz2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b3q-NP-uQ0"/>
+                            <constraint firstItem="HGZ-0p-bDI" firstAttribute="trailing" secondItem="oxi-G8-mOi" secondAttribute="trailing" id="dOa-9B-v3Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0OQ-BU-Boi" secondAttribute="bottom" constant="369" id="ece-U1-jhh"/>
+                            <constraint firstItem="0OQ-BU-Boi" firstAttribute="width" secondItem="DtD-AS-dz2" secondAttribute="width" id="fHB-Fh-vo4"/>
+                            <constraint firstItem="DtD-AS-dz2" firstAttribute="leading" secondItem="0OQ-BU-Boi" secondAttribute="leading" id="gx2-h4-oj5"/>
+                            <constraint firstItem="4j3-yX-AHe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nIe-Zl-OP4"/>
+                            <constraint firstItem="HGZ-0p-bDI" firstAttribute="leading" secondItem="oxi-G8-mOi" secondAttribute="leading" id="sZf-cJ-vha"/>
+                            <constraint firstItem="0OQ-BU-Boi" firstAttribute="centerY" secondItem="oxi-G8-mOi" secondAttribute="centerY" id="wOf-oW-lV0"/>
+                            <constraint firstItem="oxi-G8-mOi" firstAttribute="top" secondItem="HGZ-0p-bDI" secondAttribute="bottom" constant="18" id="yNt-JA-30G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="HGZ-0p-bDI" id="Lv2-Fd-lBy"/>
+                        <outlet property="numberField" destination="oxi-G8-mOi" id="RB6-7r-HzS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apress_logo" width="172" height="80"/>
+    </resources>
 </document>
